@@ -143,6 +143,7 @@ class Sync(QThread):
                 	extension=response.geturl().rsplit('.',1)[1].split('?')[0]
                 	save_path=os.path.join(*([self.folderNames[course]]+storelocation+[afilename+'.'+extension]))
                 	output=open(save_path,'w')
+                	print "NEW FILE: "+save_path
                 	output.write(response.read())
                 	output.close()
 
